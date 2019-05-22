@@ -1,26 +1,26 @@
 from utas import Utas
 
 
-def utas_nev():
+def test_utas_nev():
     joco = Utas("joco", 300, True, False, False)
     assert joco.utasNev == "joco"
 
 
-def utas_egyenleg():
+def test_utas_egyenleg():
     joco = Utas("joco", 300, True, False, False)
     assert joco.utasEgyenleg == 300
 
 
-def utas_van_e_berlete():
+def test_utas_van_e_berlete():
     joco = Utas("joco", 300, True, False, False)
     assert joco.utasVanEBerlete == True
 
 
-def utas_van_e_jegye():
+def test_utas_van_e_jegye():
     joco = Utas("joco", 300, True, False, False)
     assert joco.utasVanEJegye == False
 
 
-def utas_utazik_e():
+def test_utas_utazik_e():
     joco = Utas("joco", 300, True, False, False)
     assert joco.utasUtazikE == False
