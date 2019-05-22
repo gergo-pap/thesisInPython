@@ -1,5 +1,5 @@
-from Utas import *
-from Busz import *
+from Busz import Busz
+from Utas import Utas
 
 
 def main():

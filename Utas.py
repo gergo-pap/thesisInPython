@@ -1,6 +1,4 @@
-from random import *
-
-from Busz import *
+import random
 
 
 class Utas:
@@ -15,7 +13,7 @@ class Utas:
 
     def utasGeneralas(self):
         self.utasNev = Utas.utasNevGenerator(self)
-        self.utasEgyenleg = randint(0, 50000)
+        self.utasEgyenleg = random.randint(0, 50000)
         self.utasVanEBerlete = Utas.percentBaseTrueOrFalse(Utas, 70)
         self.utasVanEJegye = Utas.percentBaseTrueOrFalse(Utas, 25)
         self.utasUtazikE = False
@@ -50,7 +48,7 @@ class Utas:
                   "Ádám", "Zoltán", "Anita", "Nikoletta", "Klári", "Zita", "Csilla", "Adrián", "Marci",
                   "Tímea", "Dominik", "Edina", "Bianka", "Marcell")
 
-        return choice(Beginning) + " " + choice(Middle)
+        return random.choice(Beginning) + " " + random.choice(Middle)
 
     def percentBaseTrueOrFalse(self, percent):
-        return True if percent > randint(0, 100) else False
+        return True if percent > random.randint(0, 100) else False

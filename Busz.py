@@ -1,7 +1,7 @@
 import json
 import time
 
-from .Utas import *
+from Utas import Utas
 
 
 megallok = []

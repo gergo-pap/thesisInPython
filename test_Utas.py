@@ -1,5 +1,4 @@
-import pytest
-from Utas import *
+from Utas import Utas
 
 
 def utasNev(self):

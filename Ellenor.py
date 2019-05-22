@@ -1,4 +1,4 @@
-from Utas import *
+from Utas import Utas
 
 
 class Ellenor():
