@@ -5,28 +5,28 @@ from Utas import Utas
 
 
 class Busz:
-    def __init__(self, buszJaratszam, kapacitas):
+    def __init__(self, busz_jaratszam, kapacitas):
         self.megallok = []
         self.utasok = []
-        self.aktualisMegallo = ""
+        self.aktualis_megallo = ""
 
-        self.buszNev = buszJaratszam
-        self.buszSzabadHelyekSzama = kapacitas
+        self.buszNev = busz_jaratszam
+        self.busz_szabad_helyek_szama = kapacitas
 
-    def jSonBeolvasasa(self, buszJaratszam):
+    def json_beolvasasa(self, busz_jaratszam):
         with open('jaratok.json', encoding='utf-8') as data_file:
             data = json.load(data_file)
-        return data[buszJaratszam]["megallok"]  #data["160"]["megallok"][1]
+        return data[busz_jaratszam]["megallok"]  # data["160"]["megallok"][1]
 
-    def jaratInitialize(self, buszJaratszam):
-        data = self.jSonBeolvasasa(buszJaratszam)
+    def jarat_initialize(self, busz_jaratszam):
+        data = self.json_beolvasasa(busz_jaratszam)
         # if data["34"] == self.buszNev:
         for index, x in enumerate(data):
             megallo = x["name"]
             self.megallok.append(megallo)
 
-    def buszKozlekedik(self):
-        utas = Utas.utasGeneralas()
+    def busz_kozlekedik(self):
+        utas = Utas.utas_generalas()
 
         for megallo in self.megallok:
             print(megallo)
@@ -34,5 +34,5 @@ class Busz:
 
             time.sleep(.1)
 
-    def aktualisMegalloPrint(self):
-        print(self.aktualisMegallo)
+    def aktualis_megallo_print(self):
+        print(self.aktualis_megallo)
