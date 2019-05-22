@@ -4,10 +4,10 @@ import random
 class Utas:
     def __init__(self, utas_nev, utas_egyenleg, utas_van_e_berlete, utas_van_e_jegye, utas_utazik_e):
         self.utasNev = utas_nev
-        self.utasEgyenleg = utas_egyenleg
-        self.utasVanEBerlete = utas_van_e_berlete
-        self.utasVanEJegye = utas_van_e_jegye
-        self.utasUtazikE = utas_utazik_e
+        self.utas_egyenleg = utas_egyenleg
+        self.utas_van_e_berlete = utas_van_e_berlete
+        self.utas_van_e_jegye = utas_van_e_jegye
+        self.utas_utazik_e = utas_utazik_e
 
     @classmethod
     def utas_generalas(cls) -> "Utas":
@@ -20,21 +20,21 @@ class Utas:
         )
 
     def utas_felszall(self):
-        self.utasUtazikE = True
+        self.utas_utazik_e = True
 
     def utas_leszall(self):
-        self.utasUtazikE = False
+        self.utas_utazik_e = False
 
     def utas_jegyet_elhasznal(self):
-        if self.utasVanEJegye:
-            self.utasVanEJegye = False
+        if self.utas_van_e_jegye:
+            self.utas_van_e_jegye = False
         else:
             print("Nem volt jegye az utasnak")
 
     def utas_jegyet_vesz(self):
-        if self.utasEgyenleg > 450:
-            self.utasEgyenleg -= 450
-            self.utasVanEJegye = True
+        if self.utas_egyenleg > 450:
+            self.utas_egyenleg -= 450
+            self.utas_van_e_jegye = True
             print("Vett jegyet")
         else:
             print("Nincs elég pénze jegyre")

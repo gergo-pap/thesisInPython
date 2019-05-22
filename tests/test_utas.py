@@ -8,19 +8,19 @@ def test_utas_nev():
 
 def test_utas_egyenleg():
     joco = Utas("joco", 300, True, False, False)
-    assert joco.utasEgyenleg == 300
+    assert joco.utas_egyenleg == 300
 
 
 def test_utas_van_e_berlete():
     joco = Utas("joco", 300, True, False, False)
-    assert joco.utasVanEBerlete == True
+    assert joco.utas_van_e_berlete == True
 
 
 def test_utas_van_e_jegye():
     joco = Utas("joco", 300, True, False, False)
-    assert joco.utasVanEJegye == False
+    assert joco.utas_van_e_jegye == False
 
 
 def test_utas_utazik_e():
     joco = Utas("joco", 300, True, False, False)
-    assert joco.utasUtazikE == False
+    assert joco.utas_utazik_e == False
