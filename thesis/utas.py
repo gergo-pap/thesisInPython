@@ -10,7 +10,7 @@ class Utas:
         self.utasUtazikE = utas_utazik_e
 
     @classmethod
-    def utas_generalas(cls):
+    def utas_generalas(cls) -> "Utas":
         return cls(
             utas_nev=cls.utas_nev_generator(),
             utas_egyenleg=random.randint(0, 50000),
@@ -40,7 +40,7 @@ class Utas:
             print("Nincs elég pénze jegyre")
 
     @classmethod
-    def utas_nev_generator(cls):
+    def utas_nev_generator(cls) -> str:
         last_names = ("Kis", "Nagy", "Kovács", "Pap", "Szabó",
                      "Kovács", "Szűcs", "Barta", "Garaba", "Botos", "Kozma", "Szász", "Simon", "Pupek",
                      "Pomozi", "Fülöp", "Horváth", "Balogh", "Szilágyi", "Illyés", "Németh", "Csontos", "Fekete",
@@ -52,5 +52,5 @@ class Utas:
         return random.choice(last_names) + " " + random.choice(first_names)
 
     @classmethod
-    def percent_base_true_or_false(cls, percent):
+    def percent_base_true_or_false(cls, percent: int):
         return True if percent > random.randint(0, 100) else False
