@@ -2,8 +2,6 @@ import random
 
 
 class Utas:
-    utasUtazikE: bool
-
     def __init__(self, utasNev, utasEgyenleg, utasVanEBerlete, utasVanEJegye, utasUtazikE):
         self.utasNev = utasNev
         self.utasEgyenleg = utasEgyenleg
