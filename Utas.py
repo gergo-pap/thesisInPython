@@ -9,13 +9,15 @@ class Utas:
         self.utasVanEJegye = utasVanEJegye
         self.utasUtazikE = utasUtazikE
 
-    def utasGeneralas(self):
-        self.utasNev = Utas.utasNevGenerator(self)
-        self.utasEgyenleg = random.randint(0, 50000)
-        self.utasVanEBerlete = Utas.percentBaseTrueOrFalse(Utas, 70)
-        self.utasVanEJegye = Utas.percentBaseTrueOrFalse(Utas, 25)
-        self.utasUtazikE = False
-        return Utas
+    @classmethod
+    def utasGeneralas(cls):
+        return cls(
+            utasNev=cls.utasNevGenerator(),
+            utasEgyenleg=random.randint(0, 50000),
+            utasVanEBerlete=cls.percentBaseTrueOrFalse(70),
+            utasVanEJegye=cls.percentBaseTrueOrFalse(25),
+            utasUtazikE=False
+        )
 
     def utasFelszall(self):
         self.utasUtazikE = True
@@ -37,7 +39,8 @@ class Utas:
         else:
             print("Nincs elég pénze jegyre")
 
-    def utasNevGenerator(self):
+    @classmethod
+    def utasNevGenerator(cls):
         Beginning = ("Kis", "Nagy", "Kovács", "Pap", "Szabó",
                      "Kovács", "Szűcs", "Barta", "Garaba", "Botos", "Kozma", "Szász", "Simon", "Pupek",
                      "Pomozi", "Fülöp", "Horváth", "Balogh", "Szilágyi", "Illyés", "Németh", "Csontos", "Fekete",
@@ -48,5 +51,6 @@ class Utas:
 
         return random.choice(Beginning) + " " + random.choice(Middle)
 
-    def percentBaseTrueOrFalse(self, percent):
+    @classmethod
+    def percentBaseTrueOrFalse(cls, percent):
         return True if percent > random.randint(0, 100) else False

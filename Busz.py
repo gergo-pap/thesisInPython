@@ -4,13 +4,12 @@ import time
 from Utas import Utas
 
 
-megallok = []
-utasok = []
-aktualisMegallo = ""
-
-
-class Busz():
+class Busz:
     def __init__(self, buszJaratszam, kapacitas):
+        self.megallok = []
+        self.utasok = []
+        self.aktualisMegallo = ""
+
         self.buszNev = buszJaratszam
         self.buszSzabadHelyekSzama = kapacitas
 
@@ -24,15 +23,16 @@ class Busz():
         # if data["34"] == self.buszNev:
         for index, x in enumerate(data):
             megallo = x["name"]
-            megallok.append(megallo)
+            self.megallok.append(megallo)
 
     def buszKozlekedik(self):
-        utas = Utas.utasGeneralas(Utas)
-        for megallo in megallok:
+        utas = Utas.utasGeneralas()
+
+        for megallo in self.megallok:
             print(megallo)
             print(utas)
 
             time.sleep(.1)
 
     def aktualisMegalloPrint(self):
-        print(aktualisMegallo)
+        print(self.aktualisMegallo)

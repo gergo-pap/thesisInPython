@@ -1,13 +1,10 @@
-from Utas import Utas
-
-
-class Ellenor():
-    def buntet(self):
-        Utas.utasEgyenleg -= 16000
-        Utas.utasUtazikE = False
+class Ellenor:
+    def buntet(self, utas):
+        utas.utasEgyenleg -= 16000
+        utas.utasUtazikE = False
         print("Utas büntetve és leszállítva")
 
-    def ellenoriz(self):
-        if not Utas.utasVanEBerlete:
-            if not Utas.utasVanEJegye:
-                self.buntet(self)
+    def ellenoriz(self, utas):
+        if not utas.utasVanEBerlete:
+            if not utas.utasVanEJegye:
+                self.buntet(utas)
