@@ -1,5 +1,5 @@
-from busz import Busz
-from utas import Utas
+from thesis.busz import Busz
+from thesis.utas import Utas
 
 
 def main():

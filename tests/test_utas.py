@@ -1,4 +1,4 @@
-from utas import Utas
+from thesis.utas import Utas
 
 
 def test_utas_nev():

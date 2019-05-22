@@ -1,7 +1,7 @@
 import json
 import time
 
-from utas import Utas
+from thesis.utas import Utas
 
 
 class Busz:
