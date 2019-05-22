@@ -3,9 +3,11 @@ import time
 
 from .Utas import *
 
+
 megallok = []
 utasok = []
 aktualisMegallo = ""
+
 
 class Busz():
     def __init__(self, buszJaratszam, kapacitas):
@@ -23,7 +25,6 @@ class Busz():
         for index, x in enumerate(data):
             megallo = x["name"]
             megallok.append(megallo)
-
 
     def buszKozlekedik(self):
         utas = Utas.utasGeneralas(Utas)

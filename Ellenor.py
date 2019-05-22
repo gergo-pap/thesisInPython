@@ -1,7 +1,7 @@
 from Utas import *
 
-class Ellenor():
 
+class Ellenor():
     def buntet(self):
         Utas.utasEgyenleg -= 16000
         Utas.utasUtazikE = False

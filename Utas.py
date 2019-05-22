@@ -3,9 +3,7 @@ from random import *
 from Busz import *
 
 
-
 class Utas:
-
     utasUtazikE: bool
 
     def __init__(self, utasNev, utasEgyenleg, utasVanEBerlete, utasVanEJegye, utasUtazikE):
@@ -23,13 +21,11 @@ class Utas:
         self.utasUtazikE = False
         return Utas
 
-
     def utasFelszall(self):
         self.utasUtazikE = True
 
     def utasLeszall(self):
         self.utasUtazikE = False
-
 
     def utasJegyetElhasznal(self):
         if self.utasVanEJegye:
@@ -44,8 +40,6 @@ class Utas:
             print("Vett jegyet")
         else:
             print("Nincs elég pénze jegyre")
-
-
 
     def utasNevGenerator(self):
         Beginning = ("Kis", "Nagy", "Kovács", "Pap", "Szabó",
