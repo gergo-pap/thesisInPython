@@ -1,4 +1,4 @@
-from Utas import Utas
+from utas import Utas
 
 
 def utas_nev():
