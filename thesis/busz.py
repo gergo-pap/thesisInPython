@@ -2,6 +2,7 @@ import json
 import time
 
 from thesis.utas import Utas
+from thesis.utils import get_path
 
 
 class Busz:
@@ -14,7 +15,7 @@ class Busz:
         self.busz_szabad_helyek_szama = kapacitas
 
     def json_beolvasasa(self, busz_jaratszam):
-        with open('jaratok.json', encoding='utf-8') as data_file:
+        with open(get_path('jaratok.json'), encoding='utf-8') as data_file:
             data = json.load(data_file)
         return data[busz_jaratszam]["megallok"]  # data["160"]["megallok"][1]
 
